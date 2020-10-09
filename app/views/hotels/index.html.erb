@@ -1,0 +1,18 @@
+<h1>ホテルの一覧</h1>
+
+<%= search_form_for @q do |f| %>
+	<%= f.label :name_cont %>
+	<%= f.search_field :name_cont %>
+	<%= f.submit "検索", class: "btn btn-outline-secondary"%>
+<% end %>
+
+<% @hotels.each do |hotel| %>
+  <p><%= hotel.name %></p>
+  <p><%= hotel.description %></p>
+  <%= image_tag(hotel.picture_url, width: 600) if hotel.picture.present? %>
+
+	
+  	
+
+
+<% end %>

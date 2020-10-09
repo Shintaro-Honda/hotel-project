@@ -1,0 +1,15 @@
+<h1>都道府県詳細ページ</h1>
+<p><%= @prefecture.name %></p>
+
+
+
+<% @hotels.each do |hotel| %>
+  <p><%= hotel.name %></p>
+  <p><%= hotel.description %></p>
+  <%= image_tag(hotel.picture_url, width: 600) if hotel.picture.present? %>
+  
+
+<%= link_to '詳細を見る', hotel_path(hotel) %> |
+<%= link_to 'レビューを見る', hotel_reviews_path(hotel) %> |
+
+<% end %>

@@ -1,0 +1,31 @@
+
+<h1>お問い合わせ有難う御座います。</h1>
+
+<p>
+  <strong>Name:</strong>
+  <%= @reservation.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @reservation.email %>
+</p>
+
+<p>
+  <strong>Start_date:</strong>
+  <%= @reservation.start_date %>
+</p>
+
+<p>
+  <strong>End_date:</strong>
+  <%= @reservation.end_date %>
+</p>
+
+<p>
+  <strong>People:</strong>
+  <%= @reservation.people %>
+</p>
+
+
+<%= link_to 'Back', hotel_path(@hotel) %> 
+

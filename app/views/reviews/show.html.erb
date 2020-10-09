@@ -1,0 +1,23 @@
+<p>
+  <strong>Name:</strong>
+  <%= @review.name %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @review.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @review.hotel_id %>
+</p>
+
+<p>
+<strong>rating:</strong>
+  <%= @review.rating %>
+</p>
+<%= link_to 'Edit', edit_hotel_review_path(@hotel,@review) %> |
+<%= link_to 'Back',  hotel_reviews_path(@hotel) %> |
+
+<%= link_to 'Destroy', hotel_review_path(@hotel, @review), data: { confirm: 'Are you sure?' }, method: :delete %> 
